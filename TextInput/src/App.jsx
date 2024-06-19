@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-const TextInputComponent = () => {
+export function TextInputComponent() {
   const [textInput, setTextInput] = useState('');
 
   const handleChange = (e) => {
@@ -9,10 +9,8 @@ const TextInputComponent = () => {
 
   return (
     <div>
-      <input type="text" value={textInput} onChange={handleChange} placeholder="Some Text..."/>
+      <input type="text" value={textInput} onChange={handleChange} placeholder="Some Text..." />
       <p>{textInput}</p>
     </div>
   );
-};
-
-export default TextInputComponent;
+}
